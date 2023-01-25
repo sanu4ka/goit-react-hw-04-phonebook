@@ -15,13 +15,14 @@ export default function ContactForm({ handleSubmit }) {
     setNumber(value);
   };
 
+  const onSubmiting = e => {
+    e.preventDefault();
+    handleSubmit(contactName, contactNumber);
+    e.target.reset();
+  };
+
   return (
-    <form
-      className={css.form}
-      onSubmit={() => {
-        handleSubmit(contactName, contactNumber);
-      }}
-    >
+    <form className={css.form} onSubmit={onSubmiting}>
       <input
         className={css.input}
         type="text"
