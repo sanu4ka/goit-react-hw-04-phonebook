@@ -1,0 +1,14 @@
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.input {
+  height: 24px;
+}
